@@ -1,0 +1,16 @@
+[
+{
+  "modid": "zombiesatellite",
+  "name": "Zombie Satellite",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["flowerinsnow"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

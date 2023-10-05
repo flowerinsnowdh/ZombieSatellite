@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ZombiesSatellite>
+    <!--
+    队友血量显示
+    位置填写负数表示从屏幕右方（X）/下方（Y）开始计算位置
+    -->
+    <teammatesHealth>
+        <colourPattern>&gt;15:a</colourPattern>
+        <colourPattern>>&gt;10:e</colourPattern>
+        <colourPattern>>&gt;5:6</colourPattern>
+        <colourPattern>default:c</colourPattern>
+        <text>%(colour)%(player_name) %(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
+    </teammatesHealth>
+    <!--
+    大型怪血量显示
+    位置填写负数表示从屏幕右方（X）/下方（Y）开始计算位置
+    -->
+    <bossHealth>
+        <colourPattern>default:4</colourPattern>
+        <text>%(colour)%(mob_name) %(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
+    </bossHealth>
+</ZombiesSatellite>
