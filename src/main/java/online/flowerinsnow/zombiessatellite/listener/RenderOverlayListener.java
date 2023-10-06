@@ -6,12 +6,20 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import online.flowerinsnow.zombiessatellite.config.Config;
+import online.flowerinsnow.zombiessatellite.event.RenderSidebarObjectivePreAddYEvent;
 import online.flowerinsnow.zombiessatellite.util.TextUtils;
 
 import java.text.DecimalFormat;
 import java.util.regex.Pattern;
 
 public class RenderOverlayListener {
+    @SubscribeEvent
+    public void onRenderSidebarObjectiveDecided(RenderSidebarObjectivePreAddYEvent event) {
+        if (TextUtils.isInZombies()) {
+            event.addY = Config.sidebarAddY;
+        }
+    }
+
     @SubscribeEvent
     public void onRenderOverlay(RenderGameOverlayEvent.Text event) {
         if (TextUtils.isInZombies()) {

@@ -6,10 +6,10 @@
     -->
     <teammatesHealth>
         <colourPattern>&gt;15:a</colourPattern>
-        <colourPattern>>&gt;10:e</colourPattern>
-        <colourPattern>>&gt;5:6</colourPattern>
+        <colourPattern>&gt;10:e</colourPattern>
+        <colourPattern>&gt;5:6</colourPattern>
         <colourPattern>default:c</colourPattern>
-        <text>%(colour)%(player_name) %(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
+        <text>%(colour)%(player_name) %(colour)%(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
     </teammatesHealth>
     <!--
     大型怪血量显示
@@ -17,6 +17,8 @@
     -->
     <bossHealth>
         <colourPattern>default:4</colourPattern>
-        <text>%(colour)%(mob_name) %(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
+        <text>%(colour)%(mob_name) %(colour)%(health)&amp;7/%(max_health)&amp;c❤ &amp;e%(distance)m</text>
     </bossHealth>
+    <!-- 记分板侧边栏放大Y轴 -->
+    <sidebarAddY>50</sidebarAddY>
 </ZombiesSatellite>

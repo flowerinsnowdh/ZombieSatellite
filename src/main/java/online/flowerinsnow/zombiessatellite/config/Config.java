@@ -39,6 +39,7 @@ public class Config {
         ));
         public static String text = "%(colour)%(mob_name) %(health)&7/%(max_health)&c❤ &a%(direction)";
     }
+    public static int sidebarAddY = 50;
 
     public static void init(File file) {
         Config.file = file;
@@ -86,6 +87,8 @@ public class Config {
                 loadTeammatesHealth(element);
             } else if ("bossHealth".equals(element.getTagName())) {
                 loadBossHealth(element);
+            } else if ("sidebarAddY".equals(element.getTagName())) {
+                sidebarAddY = Integer.parseInt(XMLDOMUtils.getElementText(element));
             }
         });
     }
@@ -94,10 +97,10 @@ public class Config {
         XMLDOMUtils.forEachChildNodes(root, Element.class, element -> {
             switch (element.getTagName()) {
                 case "colourPattern":
-                    TeammatesHealth.colourPatterns.add(XMLDOMUtils.getString(element));
+                    TeammatesHealth.colourPatterns.add(XMLDOMUtils.getElementText(element));
                     break;
                 case "text":
-                    TeammatesHealth.text = XMLDOMUtils.getString(element);
+                    TeammatesHealth.text = XMLDOMUtils.getElementText(element);
                     break;
             }
         });
@@ -107,10 +110,10 @@ public class Config {
         XMLDOMUtils.forEachChildNodes(root, Element.class, element -> {
             switch (element.getTagName()) {
                 case "colourPattern":
-                    BossHealth.colourPatterns.add(XMLDOMUtils.getString(element));
+                    BossHealth.colourPatterns.add(XMLDOMUtils.getElementText(element));
                     break;
                 case "text":
-                    BossHealth.text = XMLDOMUtils.getString(element);
+                    BossHealth.text = XMLDOMUtils.getElementText(element);
                     break;
             }
         });

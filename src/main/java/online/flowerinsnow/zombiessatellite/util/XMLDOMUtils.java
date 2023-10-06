@@ -21,7 +21,7 @@ public abstract class XMLDOMUtils {
         }
     }
 
-    public static String getString(Element element) {
+    public static String getElementText(Element element) {
         Text text = (Text) element.getChildNodes().item(0);
         return text.getNodeValue();
     }

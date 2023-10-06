@@ -1,0 +1,7 @@
+{
+  "refmap": "mixins.zombiessatellite.refmap.json",
+  "package": "online.flowerinsnow.zombiessatellite.mixin",
+  "client": [
+    "MixinGuiIngame"
+  ]
+}
